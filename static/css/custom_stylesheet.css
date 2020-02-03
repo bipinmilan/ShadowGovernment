@@ -1,0 +1,22 @@
+#id_title {
+width: 500px;}
+
+#add_btn{
+margin-left: 400px;
+}
+
+#edit-crc {
+    font-size: 25px;
+}
+
+
+#dlt-crc {
+    font-size: 25px;
+    color: red;
+}
+
+#pwd-reset-form {
+  margin-left: 100px;
+}
+
+
