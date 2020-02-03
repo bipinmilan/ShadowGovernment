@@ -91,6 +91,71 @@
         {% endif %}
     </div>
     <hr>
+    <!--provincial search results here-->
+    <div class="row">
+        {% if pro_executive_items %}
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header bg-default" align="center">
+                    <b>Provincial EXECUTIVE</b>
+                </div>
+                {% for it in pro_executive_items %}
+                <div class="card-body">
+                    <h4>{{ it.title }}.</h4>
+
+                    <p>{{it.description|slice:"60"|striptags}}</p>
+
+                    <a type="button" href="" class="btn btn-primary" style="float: left;">{{it.related_ministry}}</a>
+                    <h6>{{ it.timestamp }}</h6>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if pro_parliament_items %}
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header bg-default" align="center">
+                    <b>Provincial Parliament</b>
+                </div>
+                {% for it in pro_parliament_items %}
+                <div class="card-body">
+                    <h4>{{ it.title }}.</h4>
+
+                    <p>{{it.description|slice:"60"|striptags}}</p>
+
+                    <a type="button" href="" class="btn btn-primary" style="float: left;">{{it.related_parliament}}</a>
+                    <h6>{{ it.timestamp }}</h6>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if pro_judiciary_items %}
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header bg-default" align="center">
+                    <b>Provincial Judiciary</b>
+                </div>
+                {% for it in pro_judiciary_items %}
+                <div class="card-body">
+                    <h4>{{ it.title }}.</h4>
+
+                    <p>{{it.description|slice:"60"|striptags}}</p>
+
+                    <a type="button" href="" class="btn btn-primary" style="float: left;">{{it.court}}</a>
+                    <h6>{{ it.timestamp }}</h6>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </div>
 </body>
 </html>

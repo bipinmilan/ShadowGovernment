@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from offices.models import ExecutiveOffice, LegislativeOffice, JudiciaryOffice, ProvinceJudiciaryOffice
+from offices.models import ExecutiveOffice, LegislativeOffice, JudiciaryOffice, ProvinceJudiciaryOffice, \
+    ProvincialParliamentOffice
 
 
 class ExecutiveOfficeAdmin(admin.ModelAdmin):
@@ -17,3 +18,4 @@ admin.site.register(JudiciaryOffice)
 
 # for provincial government offices
 admin.site.register(ProvinceJudiciaryOffice)
+admin.site.register(ProvincialParliamentOffice)

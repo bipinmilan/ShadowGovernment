@@ -29,3 +29,10 @@ class ProvinceJudiciaryOffice(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ProvincialParliamentOffice(models.Model):
+    parliament_name = models.CharField(max_length=70)
+
+    def __str__(self):
+        return self.parliament_name

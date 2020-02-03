@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from provinces.models import ProvinceJudiciary, ProvinceExecutive
+from provinces.models import ProvinceJudiciary, ProvinceExecutive, ProvincialParliament
 
 
 class ProvinceExecutiveAdmin(admin.ModelAdmin):
@@ -48,5 +48,27 @@ class ProvinceJudiciaryAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
+class ProvincialParliamentAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'title', 'author', 'is_published', 'related_parliament', 'category', 'last_modified_by', 'modified_date')
+    list_display_links = ('id', 'title')
+    list_editable = ('is_published',)
+    search_fields = ('title', 'description', 'author__username')
+    list_per_page = 25
+    exclude = ['author', 'last_modified_by', 'timestamp']
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser or request.user.groups.filter(name="Federal_Judiciary").exists():
+            return qs
+        return qs.filter(author=request.user)
+
+    def save_model(self, request, obj, form, change):
+        obj.author = request.user
+        obj.last_modified_by = request.user
+        super().save_model(request, obj, form, change)
+
+
 admin.site.register(ProvinceJudiciary, ProvinceJudiciaryAdmin)
 admin.site.register(ProvinceExecutive, ProvinceExecutiveAdmin)
+admin.site.register(ProvincialParliament, ProvincialParliamentAdmin)
