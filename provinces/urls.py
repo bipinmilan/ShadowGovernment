@@ -9,8 +9,8 @@ urlpatterns = [
     path('pro-add-executive', views.pro_upload, name='pro-add-executive'),
     path('pro-executive-data', login_required(login_url='entry-login')(ProExecutiveListView.as_view()),
          name='pro-executive-data'),
-    path('executive/<int:pk>/update', login_required(login_url='entry-login')(ProExecutiveUpdateView.as_view()),
-         name='executive-update'),
+    path('pro-executive/<int:pk>/update', login_required(login_url='entry-login')(ProExecutiveUpdateView.as_view()),
+         name='pro-executive-update'),
     path('executive/<int:pk>/delete', login_required(login_url='entry-login')(ProExecutiveDelete.as_view()),
          name='executive-delete'),
 
