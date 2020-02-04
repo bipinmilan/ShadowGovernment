@@ -100,12 +100,43 @@
                 <!--a class="dropdown-item" href="#">Action</a-->
                 <a class="collapse-item" href="{% url 'pro-add-executive' %}">Add Executive Data</a>
                 <a class="collapse-item" href="{% url 'pro-executive-data' %}">All Executive Data</a>
-
-
             </div>
         </div>
     </li>
 
+    <!-- Nav Item - Provincial Judiciary Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProJudiciary"
+           aria-expanded="true" aria-controls="collapseProJudiciairy">
+            <i class="fa fa-balance-scale"></i>
+            <span>JUDICIARY</span>
+        </a>
+        <div id="collapseProJudiciary" class="collapse" aria-labelledby="headingProJudiciary"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+                <a class="collapse-item" href="{% url 'pro-add-judiciary' %}">Add Judiciary Data</a>
+                <a class="collapse-item" href="{% url 'pro-judiciary-data' %}">All Judiciary Data</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Provincial Parliament Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseParliament"
+           aria-expanded="true" aria-controls="collapseParliament">
+            <i class="fa fa-home"></i>
+            <span>PARLIAMENT</span>
+        </a>
+        <div id="collapseParliament" class="collapse" aria-labelledby="headingProParliament"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+                <a class="collapse-item" href="{% url 'pro-add-parliament' %}">Add Parliament Data</a>
+                <a class="collapse-item" href="{% url 'pro-parliament-data' %}">All Parliament Data</a>
+            </div>
+        </div>
+    </li>
 
 
     <!-- Heading -->
