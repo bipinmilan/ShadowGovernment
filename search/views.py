@@ -53,15 +53,18 @@ def search(request):
             # provincial results
             pro_executive_results = pro_executive_queryset_list.filter(Q(title__icontains=q) |
                                                                        Q(
-                                                                           related_ministry__name__icontains=q)).distinct()
+                                                                           related_ministry__name__icontains=q) | Q(
+                select_province__Name_of_Province__icontains=q)).distinct()
 
             pro_judiciary_results = pro_judiciary_queryset_list.filter(Q(title__icontains=q) |
                                                                        Q(
-                                                                           court__name__icontains=q)).distinct()
+                                                                           court__name__icontains=q) | Q(
+                select_province__Name_of_Province__icontains=q)).distinct()
 
             pro_parliament_results = pro_parliament_queryset_list.filter(Q(title__icontains=q) |
                                                                          Q(
-                                                                             related_parliament__parliament_name__icontains=q)).distinct()
+                                                                             related_parliament__parliament_name__icontains=q) | Q(
+                select_province__Name_of_Province__icontains=q)).distinct()
 
             context = {
                 'fed_executive_items': federal_executive_results,
