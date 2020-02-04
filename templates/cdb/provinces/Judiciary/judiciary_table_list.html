@@ -41,7 +41,7 @@
                                     <th style="width: 400px;">TITLE</th>
                                     <th style="width: 40px;">AUTHOR</th>
                                     <th style="width: 5px;">IS PUBLISHED</th>
-                                    <th style="width: 400px;">COURT</th>
+                                    <th style="width: 5px;">PROVINCE</th>
                                     <th style="width: 40px;">CATEGORY</th>
                                     <th style="width: 5px;">IS PRIVATE</th>
                                     <th>ACTIONS</th>
@@ -55,7 +55,7 @@
                                     <td>{{jd.title}}</td>
                                     <td>{{jd.author }}</td>
                                     <td>{{jd.is_published}}</td>
-                                    <td>{{jd.related_court }}</td>
+                                    <td>{{jd.select_province}}</td>
                                     <td>{{jd.category}}</td>
                                     <td>{{jd.is_private}}</td>
                                     <td><a href="{% url 'pro-judiciary-update'  jd.id  %}"><i class="far fa-edit"

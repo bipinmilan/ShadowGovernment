@@ -41,7 +41,7 @@
                                     <th style="width: 400px;">TITLE</th>
                                     <th style="width: 40px;">AUTHOR</th>
                                     <th style="width: 5px;">IS PUBLISHED</th>
-                                    <th style="width: 400px;">PARLIAMENT</th>
+                                    <th style="width: 400px;">PROVINCE</th>
                                     <th style="width: 40px;">CATEGORY</th>
                                     <th style="width: 5px;">IS PRIVATE</th>
                                     <th>ACTIONS</th>
@@ -55,7 +55,7 @@
                                     <td>{{par.title}}</td>
                                     <td>{{par.author }}</td>
                                     <td>{{par.is_published}}</td>
-                                    <td>{{par.related_parliament }}</td>
+                                    <td>{{par.select_province }}</td>
                                     <td>{{par.category}}</td>
                                     <td>{{par.is_private}}</td>
                                     <td><a href="{% url 'pro-parliament-update'  par.id  %}"><i class="far fa-edit"

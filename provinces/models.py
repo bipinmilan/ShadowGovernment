@@ -17,6 +17,7 @@ class ProvinceJudiciary(BaseModel):
     last_modified_by = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='pro_jud_last_modified_by',
                                          null=True,
                                          blank=True)
+    select_province = models.ForeignKey(ProvincesName, on_delete=models.DO_NOTHING, null=True, default=True)
 
     def __str__(self):
         return self.title
@@ -27,6 +28,7 @@ class ProvinceExecutive(BaseModel):
     last_modified_by = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='pro_ex_last_modified_by',
                                          null=True,
                                          blank=True)
+    select_province = models.ForeignKey(ProvincesName, on_delete=models.DO_NOTHING, null=True, default=True)
 
     def __str__(self):
         return self.title
@@ -37,6 +39,7 @@ class ProvincialParliament(BaseModel):
     last_modified_by = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='pro_par_last_modified_by',
                                          null=True,
                                          blank=True)
+    select_province = models.ForeignKey(ProvincesName, on_delete=models.DO_NOTHING, null=True, default=True)
 
     def __str__(self):
         return self.title
