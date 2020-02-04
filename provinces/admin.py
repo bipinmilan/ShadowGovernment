@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from provinces.models import ProvinceJudiciary, ProvinceExecutive, ProvincialParliament
+from provinces.models import ProvinceJudiciary, ProvinceExecutive, ProvincialParliament, ProvincesName
 
 
 class ProvinceExecutiveAdmin(admin.ModelAdmin):
@@ -69,6 +69,19 @@ class ProvincialParliamentAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
+class ProvincesNameAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'Name_of_Province')
+    list_display_links = ('id', 'Name_of_Province')
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser.exists():
+            return qs
+        return qs.filter(author=request.user)
+
+
 admin.site.register(ProvinceJudiciary, ProvinceJudiciaryAdmin)
 admin.site.register(ProvinceExecutive, ProvinceExecutiveAdmin)
 admin.site.register(ProvincialParliament, ProvincialParliamentAdmin)
+admin.site.register(ProvincesName, ProvincesNameAdmin)

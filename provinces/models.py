@@ -5,6 +5,13 @@ from base.models import BaseModel
 from offices.models import ProvinceJudiciaryOffice, ExecutiveOffice, ProvincialParliamentOffice
 
 
+class ProvincesName(models.Model):
+    Name_of_Province = models.CharField(max_length=70)
+
+    def __str__(self):
+        return self.Name_of_Province
+
+
 class ProvinceJudiciary(BaseModel):
     court = models.ForeignKey(ProvinceJudiciaryOffice, on_delete=models.DO_NOTHING, null=True, default=True)
     last_modified_by = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='pro_jud_last_modified_by',
