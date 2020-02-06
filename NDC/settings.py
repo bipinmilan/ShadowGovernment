@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'widget_tweaks',
-    'safedelete',
+    'softdelete',
+
 
 ]
 CKEDITOR_UPLOAD_PATH = "uploads/"

@@ -5,5 +5,6 @@ from search.views import HomeView
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     # path('data', FederalListView.as_view(), name='data')
-    path('search/', views.search, name='search')
+    path('search/', views.search, name='search'),
+    path('admin-search/', views.private_search, name='admin-search'),
 ]

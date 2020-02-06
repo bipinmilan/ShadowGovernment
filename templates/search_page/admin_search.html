@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/cus/search2.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/secondpage.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin-search.css' %}"/>
 </head>
 <body>
 <div class="container-fluid">
@@ -13,24 +13,37 @@
          width="device-width" style="width: 140px; height: 120px">
 </div>
 
-<form class="example" action="{% url 'search' %}" method="get">
-    <input type="text" id="mySearch" onkeyup="myFunction()"
-           placeholder="Search...(Data Title/Content/Category/Related to Offices/Data Range )"
-           title="Search According to Category()" name="q">
-    <input type="submit" id="b" value="Search"/>
-</form>
+{% if request.user.is_superuser %}
+    <form method="get" action="{% url 'admin-search' %}">
+        <input type="text" id="admin-Search" onkeyup="myFunction()"
+               placeholder="Search...(Data Title/Content/Category/Related to Offices/Data Range )"
+               title="Search According to Category()" name="q">
+        <input type="submit" id="ad" value="search"/>
+    </form>
+    {% endif %}
+
+    {% for group in user.groups.all %}
+    {% if group.name != 'Data_Entry_Officer' %}
+    <form method="get" action="{% url 'admin-search' %}">
+        <input type="text" id="admin-Search2" onkeyup="myFunction()"
+               placeholder="Search...(Data Title/Content/Category/Related to Offices/Data Range )"
+               title="Search According to Category()" name="q">
+        <input type="submit" id="ad2" value="search"/>
+    </form>
+    {% endif %}
+    {% endfor %}
 
 <hr>
 
 <div class="container">
     <div class="row">
-        {% if fed_executive_items %}
+        {% if ad_fed_executive_items %}
         <div class="col-sm">
             <div class="card">
                 <div class="card-header bg-default" align="center">
                     <b>Federal EXECUTIVE</b>
                 </div>
-                {% for it in fed_executive_items %}
+                {% for it in ad_fed_executive_items %}
                 <div class="card-body">
                     <h4>{{ it.title }}.</h4>
 
@@ -45,7 +58,7 @@
         </div>
         {% endif %}
 
-        {% if fed_legislative_items %}
+        {% if ad_fed_legislative_items %}
         <div class="col-sm">
 
             <div class="card">
@@ -53,7 +66,7 @@
                     <b>Federal LEGISLATIVE</b>
                 </div>
 
-                {% for it in fed_legislative_items %}
+                {% for it in ad_fed_legislative_items %}
                 <div class="card-body">
                     <h4>{{ it.title }}.</h4>
 
@@ -68,14 +81,14 @@
         </div>
         {% endif %}
 
-        {% if fed_judiciary_items %}
+        {% if ad_fed_judiciary_items %}
         <div class="col-sm">
 
             <div class="card">
                 <div class="card-header bg-default" align="center">
                     <b>Federal Judiciary</b>
                 </div>
-                {% for it in fed_judiciary_items %}
+                {% for it in ad_fed_judiciary_items %}
                 <div class="card-body">
                     <h4>{{ it.title }}.</h4>
 
@@ -93,13 +106,13 @@
     <hr>
     <!--provincial search results here-->
     <div class="row">
-        {% if pro_executive_items %}
+        {% if ad_pro_executive_items %}
         <div class="col-sm">
             <div class="card">
                 <div class="card-header bg-default" align="center">
                     <b>Provincial EXECUTIVE</b>
                 </div>
-                {% for it in pro_executive_items %}
+                {% for it in ad_pro_executive_items %}
                 <div class="card-body">
                     <h4>{{ it.title }}.</h4>
 
@@ -114,13 +127,13 @@
         </div>
         {% endif %}
 
-        {% if pro_parliament_items %}
+        {% if ad_pro_parliament_items %}
         <div class="col-sm">
             <div class="card">
                 <div class="card-header bg-default" align="center">
                     <b>Provincial Parliament</b>
                 </div>
-                {% for it in pro_parliament_items %}
+                {% for it in ad_pro_parliament_items %}
                 <div class="card-body">
                     <h4>{{ it.title }}.</h4>
 
@@ -135,13 +148,13 @@
         </div>
         {% endif %}
 
-        {% if pro_judiciary_items %}
+        {% if ad_pro_judiciary_items %}
         <div class="col-sm">
             <div class="card">
                 <div class="card-header bg-default" align="center">
                     <b>Provincial Judiciary</b>
                 </div>
-                {% for it in pro_judiciary_items %}
+                {% for it in ad_pro_judiciary_items %}
                 <div class="card-body">
                     <h4>{{ it.title }}.</h4>
 
