@@ -22,12 +22,6 @@ def public_data(request):
         return HttpResponse('You have not access to see private data')
 
 
-'''class public_data(ListView):
-    template_name = 'public/public_list.html'
-    queryset = Executive.objects.filter(is_private=False)
-    context_object_name = 'public_data'''
-
-
 @login_required(login_url='entry-login')
 def index(request):
     return render(request, 'cdb/pages/index.html')
@@ -68,7 +62,8 @@ class ExecutiveUpdateView(UpdateView):
     model = Executive
     template_name = 'cdb/federals/executive/executive_update.html'
     context_object_name = 'executive_table'
-    fields = ('title', 'description', 'category', 'related_file', 'is_private', 'is_published', 'related_ministry')
+    fields = (
+        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_ministry')
 
     def get_success_url(self):
         return reverse_lazy('executive-data')
@@ -119,7 +114,8 @@ class JudiciaryUpdateView(UpdateView):
     model = Judiciary
     template_name = 'cdb/federals/judiciary/judiciary_update.html'
     context_object_name = 'judiciary_table'
-    fields = ('title', 'description', 'category', 'related_file', 'is_private', 'is_published', 'related_court')
+    fields = (
+        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_court')
 
     def get_success_url(self):
         return reverse_lazy('judiciary-update', kwargs={'pk': self.object.id})
@@ -170,7 +166,8 @@ class LegislativeUpdateView(UpdateView):
     model = Legislative
     template_name = 'cdb/federals/legislative/legislative_update.html'
     context_object_name = 'legislative_table'
-    fields = ('title', 'description', 'category', 'related_file', 'is_private', 'is_published', 'related_house')
+    fields = (
+        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_house')
 
     def get_success_url(self):
         return reverse_lazy('legislative-update', kwargs={'pk': self.object.id})
@@ -183,4 +180,3 @@ class LegislativeDelete(DeleteView):
 
     def get_success_url(self):
         return reverse_lazy('legislative-data')
-

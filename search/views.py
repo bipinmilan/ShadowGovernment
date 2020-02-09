@@ -1,30 +1,14 @@
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-
 # Create your views
-from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
 from Federal.models import Executive, Legislative, Judiciary
 from django.db.models import Q
-from django.views.generic import ListView
-
 from provinces.models import ProvinceExecutive, ProvincialParliament, ProvinceJudiciary
-from django.http import HttpResponse
-
-'''class HomeView(TemplateView):
-    template_name = 'search_page/search_result.html'''
 
 
 class HomeView(TemplateView):
     template_name = 'search_page/home.html'
-
-
-'''class FederalListView(ListView):
-    template_name = 'search_page/search_result.html'
-    model = Executive
-    queryset = Executive.objects.all()
-    context_object_name = 'executive'''
 
 
 # for public:- public data where published = True
@@ -87,7 +71,8 @@ def search(request):
 
 
 def private_search(request):
-    if request.user is not None and request.user.is_superuser or request.user.groups.filter(name="Federal_Executive") or request.user.groups.filter(
+    if request.user is not None and request.user.is_superuser or request.user.groups.filter(
+            name="Federal_Executive") or request.user.groups.filter(
             name="Federal_Legislative") or request.user.groups.filter(name="Federal_Judiciary").exists():
         ad_fed_executive_queryset_list = Executive.objects.order_by('-title').filter(is_published=True)
         ad_fed_legislative_queryset_list = Legislative.objects.order_by('-title').filter(

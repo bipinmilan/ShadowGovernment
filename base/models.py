@@ -9,9 +9,10 @@ from categories.models import Category
 
 class BaseModel(models.Model):
     title = models.CharField(max_length=100)
-    description = RichTextUploadingField(blank=True, null=True)
+    content = RichTextUploadingField(blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, null=True)
     related_file = models.FileField(upload_to='files/', blank=True)
+    description = models.TextField(blank=False, default=False)
     is_private = models.BooleanField(default=False)
     is_published = models.BooleanField(default=True)
     timestamp = models.DateTimeField(default=datetime.now, blank=True)

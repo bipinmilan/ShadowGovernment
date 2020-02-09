@@ -43,7 +43,8 @@ class ProExecutiveUpdateView(UpdateView):
     model = ProvinceExecutive
     template_name = 'cdb/provinces/executive/executive_update.html'
     context_object_name = 'executive_table'
-    fields = ('title', 'description', 'category', 'related_file', 'is_private', 'is_published', 'related_ministry')
+    fields = (
+        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_ministry')
 
     def get_success_url(self):
         return reverse_lazy('pro-executive-data')
@@ -94,7 +95,7 @@ class ProvincialJudiciaryUpdateView(UpdateView):
     model = ProvinceJudiciary
     template_name = 'cdb/provinces/judiciary/judiciary_update.html'
     context_object_name = 'pro_judiciary_table'
-    fields = ('title', 'description', 'category', 'related_file', 'is_private', 'is_published', 'court')
+    fields = ('title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'court')
 
     def get_success_url(self):
         return reverse_lazy('pro-judiciary-data')
@@ -145,7 +146,9 @@ class ProvincialParliamentUpdateView(UpdateView):
     model = ProvincialParliament
     template_name = 'cdb/provinces/parliament/parliament_update.html'
     context_object_name = 'pro_parliament_table'
-    fields = ('title', 'description', 'category', 'related_file', 'is_private', 'is_published', 'related_parliament')
+    fields = (
+        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published',
+        'related_parliament')
 
     def get_success_url(self):
         return reverse_lazy('pro-parliament-data')

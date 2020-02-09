@@ -35,9 +35,17 @@
                title="Search According to Category()" name="q">
         <input type="submit" id="b" value="search"/>
     </form>
+    {% else %}
+    <form method="get" action="{% url 'search' %}">
+        <input type="text" id="mySearch" onkeyup="myFunction()"
+               placeholder="Search...(Data Title/Content/Category/Related to Offices/Data Range )"
+               title="Search According to Category()" name="q">
+        <input type="submit" id="b" value="search"/>
+    </form>
     {% endif %}
     {% endfor %}
-  {% if request.user.is_anonymous%}
+
+    {% if request.user.is_anonymous%}
     <form method="get" action="{% url 'search' %}">
         <input type="text" id="mySearch" onkeyup="myFunction()"
                placeholder="Search...(Data Title/Content/Category/Related to Offices/Data Range )"
