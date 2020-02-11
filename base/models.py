@@ -12,7 +12,7 @@ class BaseModel(models.Model):
     content = RichTextUploadingField(blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, null=True)
     related_file = models.FileField(upload_to='files/', blank=True)
-    description = models.TextField(blank=False, default=False)
+    description = models.TextField(blank=False, null=True)
     is_private = models.BooleanField(default=False)
     is_published = models.BooleanField(default=True)
     timestamp = models.DateTimeField(default=datetime.now, blank=True)

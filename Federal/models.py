@@ -16,9 +16,6 @@ class Executive(BaseModel):
     def __str__(self):
         return self.title
 
-    '''def get_absolute_url(self):
-        return reverse('executive_update', args=(self.pk,))'''
-
 
 class Legislative(BaseModel):
     related_house = models.ForeignKey(LegislativeOffice, on_delete=models.DO_NOTHING, null=True)

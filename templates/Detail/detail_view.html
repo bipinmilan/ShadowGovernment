@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Shadow Gov. Title</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CLato:300,400" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <!--link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detail/detail_view.css' %}"/>
+
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+
+    <!-- Center Header -->
+    <div id="center-header">
+        <div class="container">
+            <div class="header-logo">
+                <img src="{% static 'img/1288px-Emblem_of_Nepal.svg.png' %}" alt="" height="150"
+                     width="device-width">
+            </div>
+        </div>
+    </div>
+    <!-- /Center Header -->
+</header>
+<!-- /Header -->
+
+<!-- SECTION -->
+<div class="section">
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- ROW -->
+        <div class="row">
+            <!-- Main Column -->
+            <div class="col-md-12">
+
+                <!-- breadcrumb -->
+                <ul class="article-breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+
+                </ul>
+                <!-- /breadcrumb -->
+
+                <!-- ARTICLE POST -->
+                <article class="article article-post">
+                    <div class="article-body">
+                        <h1 class="article-title">{{detail.title}}</h1>
+                        <ul class="article-meta">
+                            <li><i class="fa fa-clock-o"></i> April 04, 2017</li>
+                            <li><i class="fa fa-comments"></i> Category</li>
+                        </ul>
+
+                        <p></p>
+
+                        <p>{{ detail.content|safe }}</p>
+
+                    </div>
+                </article>
+                <!-- /ARTICLE POST -->
+            </div>
+            <!-- /Main Column -->
+        </div>
+        <!-- /ROW -->
+    </div>
+    <!-- /CONTAINER -->
+</div>
+<!-- /SECTION -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
