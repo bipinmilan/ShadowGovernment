@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom stlylesheet -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/detail/detail_view.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detail/detail_view.css' %}">
 
 </head>
 <body>
@@ -52,8 +52,21 @@
 
                 <!-- breadcrumb -->
                 <ul class="article-breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">News</a></li>
+                    {% if detail.select_province %}
+                    <li><a href="#">{{detail.select_province}}</a></li>
+                    {% else %}
+                    <li><a href="#">Federal</a></li>
+                    {% endif %}
+
+                    {% if detail.court %}
+                    <li><a href="#">{{detail.court}}</a></li>
+                    {% elif detail.related_house%}
+                    <li><a href="#">{{detail.related_house}}</a></li>
+                    {% elif detail.related_parliament %}
+                    <li><a href="#">{{detail.related_parliament}}</a></li>
+                    {% else %}
+                    <li><a href="#">{{detail.related_ministry}}</a></li>
+                    {% endif %}
 
                 </ul>
                 <!-- /breadcrumb -->
@@ -63,11 +76,9 @@
                     <div class="article-body">
                         <h1 class="article-title">{{detail.title}}</h1>
                         <ul class="article-meta">
-                            <li><i class="fa fa-clock-o"></i> April 04, 2017</li>
-                            <li><i class="fa fa-comments"></i> Category</li>
+                            <li><i class="fa fa-clock-o"></i>{{detail.modified_date}}</li>
+                            <li><i class="fa fa-comments"></i>{{detail.category}}</li>
                         </ul>
-
-                        <p></p>
 
                         <p>{{ detail.content|safe }}</p>
 

@@ -28,7 +28,7 @@ class Legislative(BaseModel):
 
 
 class Judiciary(BaseModel):
-    related_court = models.ForeignKey(JudiciaryOffice, on_delete=models.DO_NOTHING, null=True, default=True)
+    court = models.ForeignKey(JudiciaryOffice, on_delete=models.DO_NOTHING, null=True, default=True)
     last_modified_by = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='jud_last_modified_by',
                                          null=True,
                                          blank=True)

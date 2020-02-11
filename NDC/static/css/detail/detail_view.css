@@ -1,7 +1,7 @@
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'verdana', sans-serif;
 	color:#2C2C2C;
-	font-size:15px;
+	font-size:20px;
 	font-weight:300;
 }
 
@@ -10,6 +10,12 @@ h1,h2,h3,h4,h5,h6 {
 	color: #07090C;
 	font-weight:700;
 }
+p>img {
+    vertical-align: middle;
+    height: 300px !important;
+    width: 300px !important;
+}
+
 
 h1 {
 	font-size:31.104px;

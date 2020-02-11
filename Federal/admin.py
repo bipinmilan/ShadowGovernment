@@ -51,10 +51,10 @@ class LegislativeAdmin(admin.ModelAdmin):
 
 class JudiciaryAdmin(admin.ModelAdmin):
     list_display = (
-        'id', 'title', 'author', 'is_published', 'related_court', 'category', 'last_modified_by', 'modified_date')
+        'id', 'title', 'author', 'is_published', 'court', 'category', 'last_modified_by', 'modified_date')
     list_display_links = ('id', 'title')
     list_editable = ('is_published',)
-    search_fields = ('title', 'description', 'author__username', 'related_court__name')
+    search_fields = ('title', 'description', 'author__username', 'court__name')
     list_per_page = 25
     exclude = ['author', 'last_modified_by', 'timestamp']
 

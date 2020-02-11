@@ -115,7 +115,7 @@ class JudiciaryUpdateView(UpdateView):
     template_name = 'cdb/federals/judiciary/judiciary_update.html'
     context_object_name = 'judiciary_table'
     fields = (
-        'title', 'slug', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_court')
+        'title', 'slug', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'court')
 
     def get_success_url(self):
         return reverse_lazy('judiciary-update', kwargs={'pk': self.object.id})

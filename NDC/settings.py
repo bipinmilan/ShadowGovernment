@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'softdelete',
     'detailview',
 
-
 ]
 CKEDITOR_UPLOAD_PATH = "uploads/"
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

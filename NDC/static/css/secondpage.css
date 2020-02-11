@@ -585,6 +585,14 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+#cf-admin {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 35px;
+}
 
 .row {
   display: -ms-flexbox;
@@ -10052,7 +10060,7 @@ a.text-dark:hover, a.text-dark:focus {
 #header{
   text-align: center;
 }
-#mySearch {
+#mySearch, #admin-search2, #admin-search {
   text-align-last: left;
   text-align: center;
   width:60%;
@@ -10061,7 +10069,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: 5px solid #ddd;
   border-radius: 50px;
 }
-#b{
+#b, #ad, #ad2{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 width: fit-content; 

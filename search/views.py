@@ -36,7 +36,7 @@ def search(request):
 
             federal_judiciary_results = fed_judiciary_queryset_list.filter(Q(title__icontains=q) |
                                                                            Q(
-                                                                               related_court__name__icontains=q)).distinct()
+                                                                               court__name__icontains=q)).distinct()
 
             federal_legislative_results = fed_legislative_queryset_list.filter(Q(title__icontains=q) |
                                                                                Q(
@@ -93,7 +93,7 @@ def private_search(request):
 
                 ad_federal_judiciary_results = ad_fed_judiciary_queryset_list.filter(Q(title__icontains=q) |
                                                                                      Q(
-                                                                                         related_court__name__icontains=q)).distinct()
+                                                                                         court__name__icontains=q)).distinct()
 
                 ad_federal_legislative_results = ad_fed_legislative_queryset_list.filter(Q(title__icontains=q) |
                                                                                          Q(
