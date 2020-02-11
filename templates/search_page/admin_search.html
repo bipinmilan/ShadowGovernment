@@ -45,7 +45,7 @@
                 </div>
                 {% for it in ad_fed_executive_items %}
                 <div class="card-body">
-                    <h4>{{ it.title }}.</h4>
+                    <a href="{% url 'detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}.</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
                     <a type="button" class="btn btn-primary" style="float: left;" href="#">{{it.related_ministry}}</a>
@@ -67,7 +67,7 @@
 
                 {% for it in ad_fed_legislative_items %}
                 <div class="card-body">
-                    <h4>{{ it.title }}.</h4>
+                    <a href="{% url 'fed_leg_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}.</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -89,7 +89,7 @@
                 </div>
                 {% for it in ad_fed_judiciary_items %}
                 <div class="card-body">
-                    <h4>{{ it.title }}.</h4>
+                   <a href="{% url 'fed_jud_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}.</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -113,7 +113,7 @@
                 </div>
                 {% for it in ad_pro_executive_items %}
                 <div class="card-body">
-                    <h4>{{ it.title }}.</h4>
+                    <a href="{% url 'pro_ex_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -134,7 +134,7 @@
                 </div>
                 {% for it in ad_pro_parliament_items %}
                 <div class="card-body">
-                    <h4>{{ it.title }}.</h4>
+                    <a href="{% url 'par_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -155,7 +155,7 @@
                 </div>
                 {% for it in ad_pro_judiciary_items %}
                 <div class="card-body">
-                    <h4>{{ it.title }}.</h4>
+                    <a href="{% url 'pro_jud_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 

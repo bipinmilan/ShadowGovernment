@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32162615-b9b2-4409-b539-6babedeb80d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Federal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Federal/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NDC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NDC/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NDC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NDC/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Federal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Federal/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provinces/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/provinces/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detailview/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/detailview/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detailview/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/detailview/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provinces/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/provinces/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search_page/admin_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search_page/admin_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/search_page/search_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search_page/search_result.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,64 +62,82 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="24" />
-          <entry key="html" value="259" />
+          <entry key="html" value="262" />
           <entry key="js" value="2" />
-          <entry key="py" value="423" />
+          <entry key="py" value="432" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="24" />
-          <entry key="HTML" value="259" />
+          <entry key="HTML" value="262" />
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="423" />
+          <entry key="Python" value="432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="243" />
-          <entry key="html" value="7272" />
-          <entry key="py" value="16341" />
+          <entry key="html" value="7333" />
+          <entry key="py" value="16678" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="243" />
-          <entry key="HTML" value="7272" />
+          <entry key="HTML" value="7333" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="16341" />
+          <entry key="Python" value="16678" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/search_page/search_result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="145" column="94" lean-forward="true" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/search_page/admin_search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="155" column="46" lean-forward="true" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/provinces/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="30" column="93" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="93" />
+            <state relative-caret-position="170">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Federal/models.py">
+        <entry file="file://$PROJECT_DIR$/provinces/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="17">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/models.py">
+        <entry file="file://$PROJECT_DIR$/detailview/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+            <state relative-caret-position="153">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -166,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Federal/admin.py" />
         <option value="$PROJECT_DIR$/templates/cdb/provinces/executive/upload_form.html" />
         <option value="$PROJECT_DIR$/templates/cdb/provinces/executive/executive_update.html" />
         <option value="$PROJECT_DIR$/templates/cdb/provinces/executive/executive_table_list.html" />
@@ -200,9 +217,6 @@
         <option value="$PROJECT_DIR$/templates/search_page/base_home_page.html" />
         <option value="$PROJECT_DIR$/NDC/static/css/admin-search.css" />
         <option value="$PROJECT_DIR$/NDC/static/css/secondpage.css" />
-        <option value="$PROJECT_DIR$/Federal/views.py" />
-        <option value="$PROJECT_DIR$/provinces/views.py" />
-        <option value="$PROJECT_DIR$/templates/search_page/admin_search.html" />
         <option value="$PROJECT_DIR$/search/views.py" />
         <option value="$PROJECT_DIR$/templates/search_page/home.html" />
         <option value="$PROJECT_DIR$/search/urls.py" />
@@ -211,12 +225,16 @@
         <option value="$PROJECT_DIR$/NDC/settings.py" />
         <option value="$PROJECT_DIR$/NDC/urls.py" />
         <option value="$PROJECT_DIR$/templates/Detail/detail_view.html" />
-        <option value="$PROJECT_DIR$/detailview/views.py" />
-        <option value="$PROJECT_DIR$/templates/search_page/search_result.html" />
-        <option value="$PROJECT_DIR$/detailview/urls.py" />
         <option value="$PROJECT_DIR$/Federal/models.py" />
-        <option value="$PROJECT_DIR$/base/models.py" />
         <option value="$PROJECT_DIR$/provinces/models.py" />
+        <option value="$PROJECT_DIR$/NDC/util.py" />
+        <option value="$PROJECT_DIR$/base/models.py" />
+        <option value="$PROJECT_DIR$/Federal/views.py" />
+        <option value="$PROJECT_DIR$/provinces/views.py" />
+        <option value="$PROJECT_DIR$/detailview/views.py" />
+        <option value="$PROJECT_DIR$/detailview/urls.py" />
+        <option value="$PROJECT_DIR$/templates/search_page/search_result.html" />
+        <option value="$PROJECT_DIR$/templates/search_page/admin_search.html" />
       </list>
     </option>
   </component>
@@ -238,6 +256,17 @@
             <path>
               <item name="NDC" type="b2602c69:ProjectViewProjectNode" />
               <item name="NDC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NDC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NDC" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NDC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NDC" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="search_page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,8 +323,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.50256413" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -306,7 +336,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49776787" visible="true" weight="0.45737705" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49776787" visible="true" weight="0.3704918" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50223213" side_tool="true" weight="0.3590164" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -340,16 +370,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Federal/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provinces/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cdb/provinces/Judiciary/judiciary_table_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
@@ -474,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provinces/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -495,24 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search_page/admin_search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NDC/static/css/detail/detail_view.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="609" selection-start-line="609" selection-end-line="609" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Federal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -551,37 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search_page/search_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Detail/detail_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detailview/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detailview/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,16 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Federal/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -654,10 +616,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NDC/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Federal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provinces/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/provinces/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="30" column="93" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="93" />
+        <state relative-caret-position="170">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provinces/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detailview/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detailview/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search_page/search_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="145" column="94" lean-forward="true" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search_page/admin_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="155" column="46" lean-forward="true" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
         </state>
       </provider>
     </entry>

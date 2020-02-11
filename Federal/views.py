@@ -63,7 +63,7 @@ class ExecutiveUpdateView(UpdateView):
     template_name = 'cdb/federals/executive/executive_update.html'
     context_object_name = 'executive_table'
     fields = (
-        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_ministry')
+        'title', 'slug', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_ministry')
 
     def get_success_url(self):
         return reverse_lazy('executive-data')
@@ -115,7 +115,7 @@ class JudiciaryUpdateView(UpdateView):
     template_name = 'cdb/federals/judiciary/judiciary_update.html'
     context_object_name = 'judiciary_table'
     fields = (
-        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_court')
+        'title', 'slug', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_court')
 
     def get_success_url(self):
         return reverse_lazy('judiciary-update', kwargs={'pk': self.object.id})
@@ -167,7 +167,7 @@ class LegislativeUpdateView(UpdateView):
     template_name = 'cdb/federals/legislative/legislative_update.html'
     context_object_name = 'legislative_table'
     fields = (
-        'title', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_house')
+        'title', 'slug', 'content', 'category', 'related_file', 'description', 'is_private', 'is_published', 'related_house')
 
     def get_success_url(self):
         return reverse_lazy('legislative-update', kwargs={'pk': self.object.id})

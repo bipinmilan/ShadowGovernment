@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView
 
 from Federal.models import Executive, Judiciary, Legislative
+from provinces.models import ProvinceExecutive, ProvincialParliament, ProvinceJudiciary
 
 
 class PostDetailExecutiveView(DetailView):
@@ -20,5 +21,23 @@ class PostDetailJudiciaryView(DetailView):
 
 class PostDetailLegislativeView(DetailView):
     model = Legislative
+    template_name = 'Detail/detail_view.html'
+    context_object_name = 'detail'
+
+
+class PostDetailProExecutiveView(DetailView):
+    model = ProvinceExecutive
+    template_name = 'Detail/detail_view.html'
+    context_object_name = 'detail'
+
+
+class PostDetailProParliamentView(DetailView):
+    model = ProvincialParliament
+    template_name = 'Detail/detail_view.html'
+    context_object_name = 'detail'
+
+
+class PostDetailProJudiciaryView(DetailView):
+    model = ProvinceJudiciary
     template_name = 'Detail/detail_view.html'
     context_object_name = 'detail'

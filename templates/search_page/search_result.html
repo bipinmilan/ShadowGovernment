@@ -32,7 +32,7 @@
                 </div>
                 {% for it in fed_executive_items %}
                 <div class="card-body">
-                    <a href="{% url 'detail'  it.id  %}"><h4>{{ it.title }}</h4></a>
+                    <a href="{% url 'detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -55,7 +55,7 @@
 
                 {% for it in fed_legislative_items %}
                 <div class="card-body">
-                    <a href="{% url 'detail'  it.id  %}"><h4>{{ it.title }}.</h4></a>
+                    <a href="{% url 'fed_leg_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -77,7 +77,7 @@
                 </div>
                 {% for it in fed_judiciary_items %}
                 <div class="card-body">
-                    <a href="{% url 'fed_jud_detail'  it.id  %}"><h4>{{ it.title }}.</h4></a>
+                    <a href="{% url 'fed_jud_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -101,7 +101,7 @@
                 </div>
                 {% for it in pro_executive_items %}
                 <div class="card-body">
-                    <a href="{% url 'detail'  it.id  %}"><h4>{{ it.title }}.</h4></a>
+                    <a href="{% url 'pro_ex_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -122,7 +122,7 @@
                 </div>
                 {% for it in pro_parliament_items %}
                 <div class="card-body">
-                    <a href="{% url 'detail'  it.id  %}"><h4>{{ it.title }}</h4></a>
+                    <a href="{% url 'par_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
@@ -143,7 +143,7 @@
                 </div>
                 {% for it in pro_judiciary_items %}
                 <div class="card-body">
-                    <a href="{% url 'detail'  it.id  %}"><h4>{{ it.title }}</h4></a>
+                    <a href="{% url 'pro_jud_detail'  it.slug  %}" target="_blank"><h4>{{ it.title }}</h4></a>
 
                     <p>{{it.description|slice:"150"}}</p>
 
